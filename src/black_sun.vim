@@ -5,7 +5,7 @@ if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name='bk'
+let g:colors_name='black_sun'
 set t_Co=256
 
 " colors
