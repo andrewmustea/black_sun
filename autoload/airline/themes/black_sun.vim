@@ -38,43 +38,43 @@ let s:guiGray = "#666666"
 let s:ctermWhite = "231"
 let s:ctermGray = "243"
 
-let g:airline#themes#jellybeans#palette = {}
+let g:airline#themes#black_sun#palette = {}
 let s:modified = { 'airline_c': [ '#ffb964', '', 215, '', '' ] }
 
 " Normal mode
 let s:N1 = [ s:gui07 , s:gui0D , s:cterm07 , s:cterm0D  ]
 let s:N2 = [ s:guiWhite , s:gui01 , s:ctermWhite , s:cterm01  ]
 let s:N3 = [ s:gui02 , s:gui00 , s:cterm02 , s:cterm00  ]
-let g:airline#themes#jellybeans#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
-let g:airline#themes#jellybeans#palette.normal_modified = s:modified
+let g:airline#themes#black_sun#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
+let g:airline#themes#black_sun#palette.normal_modified = s:modified
 
 " Insert mode
 let s:I1 = [ s:guiWhite , s:gui0B , s:ctermWhite , s:cterm0B  ]
 let s:I2 = s:N2
 let s:I3 = [ s:guiWhite , s:gui01 , s:ctermWhite , s:cterm00  ]
-let g:airline#themes#jellybeans#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
-let g:airline#themes#jellybeans#palette.insert_modified = s:modified
+let g:airline#themes#black_sun#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
+let g:airline#themes#black_sun#palette.insert_modified = s:modified
 
 " Visual mode
 let s:V1 = [ s:guiWhite , s:gui08 , s:ctermWhite , s:cterm08 ]
 let s:V2 = s:N2
 let s:V3 = s:I3
-let g:airline#themes#jellybeans#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
-let g:airline#themes#jellybeans#palette.visual_modified = s:modified
+let g:airline#themes#black_sun#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
+let g:airline#themes#black_sun#palette.visual_modified = s:modified
 
 " Replace mode
 let s:R1 = [ s:gui08 , s:gui01 , s:cterm08, s:cterm00 ]
 let s:R2 = s:N2
 let s:R3 = s:I3
-let g:airline#themes#jellybeans#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
-let g:airline#themes#jellybeans#palette.replace_modified = s:modified
+let g:airline#themes#black_sun#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
+let g:airline#themes#black_sun#palette.replace_modified = s:modified
 
 " Inactive mode
 let s:IN1 = [ s:guiGray , s:gui01 , s:ctermGray , s:cterm01 ]
 let s:IN2 = [ s:gui02 , s:gui00 , s:cterm02 , s:cterm00 ]
 let s:IN3 = [ s:gui02 , s:gui00 , s:cterm02 , s:cterm00 ]
-let g:airline#themes#jellybeans#palette.inactive = airline#themes#generate_color_map(s:IN1, s:IN2, s:IN3)
-let g:airline#themes#jellybeans#palette.inactive_modified = s:modified
+let g:airline#themes#black_sun#palette.inactive = airline#themes#generate_color_map(s:IN1, s:IN2, s:IN3)
+let g:airline#themes#black_sun#palette.inactive_modified = s:modified
 
 " CtrlP
 if !get(g:, 'loaded_ctrlp', 0)
@@ -85,4 +85,4 @@ let s:CP1 = [ s:guiWhite , s:gui01 , s:ctermWhite , s:cterm01  ]
 let s:CP2 = [ s:guiWhite , s:gui03 , s:ctermWhite , s:cterm01  ]
 let s:CP3 = [ s:guiWhite , s:gui0D , s:ctermWhite , s:cterm0D  ]
 
-let g:airline#themes#jellybeans#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(s:CP1, s:CP2, s:CP3)
+let g:airline#themes#black_sun#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(s:CP1, s:CP2, s:CP3)
