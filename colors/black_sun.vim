@@ -9,193 +9,192 @@ let g:colors_name='black_sun'
 set t_Co=256
 
 " colors
-let black      = "#0C0C0C"
-let white      = "#CCCCCC"
-let grey       = "#4E4B59"
-let light_grey = "#888888"
-let dark_grey  = "#404040"
-let black_grey = "#121212"
-let white_grey = "#AAAAAA"
-let blue_grey  = "#253340"
-let green_grey = "#151A1E"
-let salmon     = "#d16969"
-let dark_red   = "#DC222C"
-let blue       = "#36A3D9"
-let dark_blue  = "#0040BB"
-let cyan       = "#78cffa"
-let magenta    = "#B233B2"
-let purple     = "#8733DB"
-let green      = "#009933"
-let dark_green = "#005f00"
-let sage       = "#567E44"
-let orange     = "#EF6722"
-let aquamarine = "#95E6CB"
-let gold       = "#996600"
-let yellow     = "#9C9C00"
+let s:black      = '#0C0C0C'
+let s:white      = '#CCCCCC'
+let s:grey       = '#4E4B59'
+let s:light_grey = '#888888'
+let s:dark_grey  = '#404040'
+let s:black_grey = '#121212'
+let s:white_grey = '#AAAAAA'
+let s:blue_grey  = '#253340'
+let s:green_grey = '#151A1E'
+let s:salmon     = '#d16969'
+let s:dark_red   = '#DC222C'
+let s:blue       = '#36A3D9'
+let s:dark_blue  = '#0040BB'
+let s:cyan       = '#78cffa'
+let s:magenta    = '#B233B2'
+let s:purple     = '#8733DB'
+let s:green      = '#009933'
+let s:dark_green = '#005f00'
+let s:sage       = '#567E44'
+let s:orange     = '#EF6722'
+let s:aquamarine = '#95E6CB'
+let s:gold       = '#996600'
+let s:yellow     = '#9C9C00'
 
 
 " Vim Highlighting:
 " -------------------------------------------------------------------------
-let ColorAssignment = {}
+let s:ColorAssignment = {}
 
-let ColorAssignment["Comment"]      = {"guifg": dark_blue,    "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['Comment']      = {'guifg': s:dark_blue,    'guibg': 'NONE',       'gui': 'NONE'}
 
 " Constants
-let ColorAssignment["Constant"]     = {"guifg": magenta,      "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["String"]       = {"guifg": sage,         "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['Constant']     = {'guifg': s:magenta,      'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['String']       = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
 " Character
 " Number
 " Boolean
 " Float
 
-let ColorAssignment["Identifier"]   = {"guifg": blue,         "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["Function"]     = {"guifg": magenta,      "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['Identifier']   = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Function']     = {'guifg': s:magenta,      'guibg': 'NONE',       'gui': 'NONE'}
 
-let ColorAssignment["Statement"]    = {"guifg": orange,       "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["Conditional"]  = {"guifg": blue,         "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["Repeat"]       = {"guifg": blue,         "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['Statement']    = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Conditional']  = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Repeat']       = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
 " Label
-let ColorAssignment["Operator"]     = {"guifg": white_grey,   "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['Operator']     = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
 " Keyword
 " Exception
 
-let ColorAssignment["PreProc"]      = {"guifg": dark_red,     "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["Include"]      = {"guifg": aquamarine,   "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["Define"]       = {"guifg": aquamarine,   "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['PreProc']      = {'guifg': s:dark_red,     'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Include']      = {'guifg': s:aquamarine,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Define']       = {'guifg': s:aquamarine,   'guibg': 'NONE',       'gui': 'NONE'}
 " Macro
-let ColorAssignment["PreCondit"]    = {"guifg": aquamarine,   "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['PreCondit']    = {'guifg': s:aquamarine,   'guibg': 'NONE',       'gui': 'NONE'}
 
-let ColorAssignment["Type"]         = {"guifg": cyan,         "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['Type']         = {'guifg': s:cyan,         'guibg': 'NONE',       'gui': 'NONE'}
 " StorageClass
 " Structure
 " Typedef
 
-let ColorAssignment["Special"]      = {"guifg": dark_red,     "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['Special']      = {'guifg': s:dark_red,     'guibg': 'NONE',       'gui': 'NONE'}
 " SpecialChar
 " Tag
 " Delimiter
 " SpecialComment
 " Debug
 
-let ColorAssignment["Underlined"]   = {"guifg": blue,         "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['Underlined']   = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
 
-let ColorAssignment["Ignore"]       = {"guifg":light_grey,    "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['Ignore']       = {'guifg': s:light_grey,   'guibg': 'NONE',       'gui': 'NONE'}
 
-let ColorAssignment["Error"]        = {"guifg": dark_red,     "guibg": black,       "gui": "reverse"}
+let s:ColorAssignment['Error']        = {'guifg': s:dark_red,     'guibg': s:black,      'gui': 'reverse'}
 
-let ColorAssignment["Todo"]         = {"guifg": gold,         "guibg": black,       "gui": "reverse"}
+let s:ColorAssignment['Todo']         = {'guifg': s:gold,         'guibg': s:black,      'gui': 'reverse'}
 
 
-let ColorAssignment["qfLineNr"]     = {"guifg": orange,       "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['qfLineNr']     = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
 " qfFileName
 " qfLineNr
 " qfError
 
-let ColorAssignment["Conceal"]      = {"guifg": orange,       "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["CursorLineConceal"] = {"guifg": orange,  "guibg": green_grey,  "gui": "NONE"}
+let s:ColorAssignment['Conceal']      = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['CursorLineConceal'] = {'guifg': s:orange,  'guibg': s:green_grey, 'gui': 'NONE'}
 
 
-let ColorAssignment["Normal"]       = {"guifg": white_grey,   "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["ColorColumn"]  = {"guifg": "NONE",       "guibg": green_grey,  "gui": "NONE"}
-let ColorAssignment["Conceal"]      = {"guifg": white_grey,   "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["Cursor"]       = {"guifg": white_grey,   "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["lCursor"]      = {"guifg": white_grey,   "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["CursorIM"]     = {"guifg": white_grey,   "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["CursorColumn"] = {"guifg": "NONE",       "guibg": green_grey,  "gui": "NONE"}
-let ColorAssignment["CursorLine"]   = {"guifg": "NONE",       "guibg": green_grey,  "gui": "NONE"}
-let ColorAssignment["CursorLineNr"] = {"guifg": white_grey,   "guibg": green_grey,  "gui": "NONE"}
-let ColorAssignment["LineNr"]       = {"guifg": dark_grey,    "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["TermCursor"]   = {"guifg": grey,         "guibg": black,       "gui": "reverse"}
+let s:ColorAssignment['Normal']       = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['ColorColumn']  = {'guifg': 'NONE',         'guibg': s:green_grey, 'gui': 'NONE'}
+let s:ColorAssignment['Conceal']      = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Cursor']       = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['lCursor']      = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['CursorIM']     = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['CursorColumn'] = {'guifg': 'NONE',         'guibg': s:green_grey, 'gui': 'NONE'}
+let s:ColorAssignment['CursorLine']   = {'guifg': 'NONE',         'guibg': s:green_grey, 'gui': 'NONE'}
+let s:ColorAssignment['CursorLineNr'] = {'guifg': s:white_grey,   'guibg': s:green_grey, 'gui': 'NONE'}
+let s:ColorAssignment['LineNr']       = {'guifg': s:dark_grey,    'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['TermCursor']   = {'guifg': s:grey,         'guibg': s:black,      'gui': 'reverse'}
 
-let ColorAssignment["Directory"]    = {"guifg": light_grey,   "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["DiffAdd"]      = {"guifg": sage,         "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["DiffChange"]   = {"guifg": blue,         "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["DiffDelete"]   = {"guifg": salmon,       "guibg": black,       "gui": "reverse"}
-let ColorAssignment["DiffText"]     = {"guifg": white_grey,   "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["ErrorMsg"]     = {"guifg": dark_red,     "guibg": black,       "gui": "standout"}
-let ColorAssignment["VertSplit"]    = {"guifg": green_grey,   "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["Folded"]       = {"guifg": blue_grey,    "guibg": white_grey,  "gui": "standout"}
-let ColorAssignment["FoldColumn"]   = {"guifg": white_grey,   "guibg": black_grey,  "gui": "NONE"}
-let ColorAssignment["SignColumn"]   = {"guifg": "NONE",       "guibg": black_grey,  "gui": "NONE"}
+let s:ColorAssignment['Directory']    = {'guifg': s:light_grey,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['DiffAdd']      = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['DiffChange']   = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['DiffDelete']   = {'guifg': s:salmon,       'guibg': s:black,      'gui': 'reverse'}
+let s:ColorAssignment['DiffText']     = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['ErrorMsg']     = {'guifg': s:dark_red,     'guibg': s:black,      'gui': 'standout'}
+let s:ColorAssignment['VertSplit']    = {'guifg': s:green_grey,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Folded']       = {'guifg': s:blue_grey,    'guibg': s:white_grey, 'gui': 'standout'}
+let s:ColorAssignment['FoldColumn']   = {'guifg': s:white_grey,   'guibg': s:black_grey, 'gui': 'NONE'}
+let s:ColorAssignment['SignColumn']   = {'guifg': 'NONE',         'guibg': s:black_grey, 'gui': 'NONE'}
 " Incsearch
 
-let ColorAssignment["MatchParen"]   = {"guifg": white_grey,   "guibg": "NONE",      "gui": "underline"}
-let ColorAssignment["ModeMsg"]      = {"guifg": sage,         "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["MoreMsg"]      = {"guifg": sage,         "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["NonText"]      = {"guifg": grey,         "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["Pmenu"]        = {"guifg": white_grey,   "guibg": blue_grey,   "gui": "NONE"}
-let ColorAssignment["PmenuSel"]     = {"guifg": white_grey,   "guibg": blue_grey,   "gui": "reverse"}
-let ColorAssignment["PmenuSbar"]    = {"guifg": white_grey,   "guibg": "NONE",      "gui": "reverse"}
-let ColorAssignment["PmenuThumb"]   = {"guifg": white_grey,   "guibg": "NONE",      "gui": "reverse"}
-let ColorAssignment["Question"]     = {"guifg": sage,         "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["Search"]       = {"guifg": purple,       "guibg": black,       "gui": "reverse"}
-let ColorAssignment["SpecialKey"]   = {"guifg": magenta,      "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["SpecialCap"]   = {"guifg": blue,         "guibg": "NONE",      "gui": "underline"}
-let ColorAssignment["SpellLocal"]   = {"guifg": orange,       "guibg": "NONE",      "gui": "underline"}
-let ColorAssignment["SpellBad"]     = {"guifg": salmon,       "guibg": "NONE",      "gui": "underline"}
-let ColorAssignment["SpellRare"]    = {"guifg": aquamarine,   "guibg": "NONE",      "gui": "underline"}
-let ColorAssignment["StatusLine"]   = {"guifg": white_grey,   "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["StatusLineNC"] = {"guifg": grey,         "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["WildMenu"]     = {"guifg": salmon,       "guibg": black,       "gui": "reverse"}
-let ColorAssignment["TabLine"]      = {"guifg": white_grey,   "guibg": black_grey,  "gui": "reverse"}
+let s:ColorAssignment['MatchParen']   = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'underline'}
+let s:ColorAssignment['ModeMsg']      = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['MoreMsg']      = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['NonText']      = {'guifg': s:grey,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Pmenu']        = {'guifg': s:white_grey,   'guibg': s:blue_grey,  'gui': 'NONE'}
+let s:ColorAssignment['PmenuSel']     = {'guifg': s:white_grey,   'guibg': s:blue_grey,  'gui': 'reverse'}
+let s:ColorAssignment['PmenuSbar']    = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'reverse'}
+let s:ColorAssignment['PmenuThumb']   = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'reverse'}
+let s:ColorAssignment['Question']     = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Search']       = {'guifg': s:purple,       'guibg': s:black,      'gui': 'reverse'}
+let s:ColorAssignment['SpecialKey']   = {'guifg': s:magenta,      'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['SpecialCap']   = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'underline'}
+let s:ColorAssignment['SpellLocal']   = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'underline'}
+let s:ColorAssignment['SpellBad']     = {'guifg': s:salmon,       'guibg': 'NONE',       'gui': 'underline'}
+let s:ColorAssignment['SpellRare']    = {'guifg': s:aquamarine,   'guibg': 'NONE',       'gui': 'underline'}
+let s:ColorAssignment['StatusLine']   = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['StatusLineNC'] = {'guifg': s:grey,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['WildMenu']     = {'guifg': s:salmon,       'guibg': s:black,      'gui': 'reverse'}
+let s:ColorAssignment['TabLine']      = {'guifg': s:white_grey,   'guibg': s:black_grey, 'gui': 'reverse'}
 " TabLineFill
 " TabLineSel
-let ColorAssignment["Title"]        = {"guifg": orange,       "guibg": "NONE",      "gui": "NONE"}
-let ColorAssignment["Visual"]       = {"guifg": "NONE",       "guibg": blue_grey,   "gui": "NONE"}
+let s:ColorAssignment['Title']        = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Visual']       = {'guifg': 'NONE',         'guibg': s:blue_grey,  'gui': 'NONE'}
 " VisualNos
-let ColorAssignment["WarningMsg"]   = {"guifg": salmon,       "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['WarningMsg']   = {'guifg': s:salmon,       'guibg': 'NONE',       'gui': 'NONE'}
 
-let ColorAssignment["LongLineWarning"] = {"guifg": gold,      "guibg": black,       "gui": "reverse"}
+let s:ColorAssignment['LongLineWarning'] = {'guifg': s:gold,      'guibg': s:black,      'gui': 'reverse'}
 
 
 " bash
 "
-let ColorAssignment["shDoubleQuote"] = {"guifg": sage,        "guibg": "NONE",      "gui": "NONE"}
+let s:ColorAssignment['shDoubleQuote'] = {'guifg': s:sage,        'guibg': 'NONE',       'gui': 'NONE'}
 
 
 " NerdTree:
 "
-let ColorAssignment["NERDTreeOpenable"] = {"guifg": grey,       "guibg": "NONE",    "gui": "NONE"}
-let ColorAssignment["NERDTreeClosable"] = {"guifg": light_grey, "guibg": "NONE",    "gui": "NONE"}
+let s:ColorAssignment['NERDTreeOpenable'] = {'guifg': s:grey,       'guibg': 'NONE',     'gui': 'NONE'}
+let s:ColorAssignment['NERDTreeClosable'] = {'guifg': s:light_grey, 'guibg': 'NONE',     'gui': 'NONE'}
 " NERDTreeBookmarksHeader
 " NERDTreeBookmarksLeader
 " NERDTreeBookmarkName
 " NERDTreeCWD
-let ColorAssignment["NERDTreeUp"]       = {"guifg": grey,       "guibg": "NONE",    "gui": "NONE"}
-let ColorAssignment["NERDTreeDir"]      = {"guifg": purple,     "guibg": "NONE",    "gui": "NONE"}
-let ColorAssignment["NERDTreeFile"]     = {"guifg": "NONE",     "guibg": "NONE",    "gui": "NONE"}
-let ColorAssignment["NERDTreeDirSlash"] = {"guifg": light_grey, "guibg": "NONE",    "gui": "NONE"}
+let s:ColorAssignment['NERDTreeUp']       = {'guifg': s:grey,       'guibg': 'NONE',     'gui': 'NONE'}
+let s:ColorAssignment['NERDTreeDir']      = {'guifg': s:purple,     'guibg': 'NONE',     'gui': 'NONE'}
+let s:ColorAssignment['NERDTreeFile']     = {'guifg': 'NONE',       'guibg': 'NONE',     'gui': 'NONE'}
+let s:ColorAssignment['NERDTreeDirSlash'] = {'guifg': s:light_grey, 'guibg': 'NONE',     'gui': 'NONE'}
 
 
 " GitGutter
 "
-let ColorAssignment["GitGutterAdd"]          = {"guifg": sage,   "guibg": "NONE",   "gui": "NONE"}
-let ColorAssignment["GitGutterChange"]       = {"guifg": blue,   "guibg": "NONE",   "gui": "NONE"}
-let ColorAssignment["GitGutterDelete"]       = {"guifg": salmon, "guibg": "NONE",   "gui": "NONE"}
-let ColorAssignment["GitGutterChangeDelete"] = {"guifg": salmon, "guibg": "NONE",   "gui": "NONE"}
-let ColorAssignment["SignColumn"]            = {"guifg": "NONE", "guibg": "NONE",   "gui": "NONE"}
+let s:ColorAssignment['GitGutterAdd']          = {'guifg': s:sage,   'guibg': 'NONE',    'gui': 'NONE'}
+let s:ColorAssignment['GitGutterChange']       = {'guifg': s:blue,   'guibg': 'NONE',    'gui': 'NONE'}
+let s:ColorAssignment['GitGutterDelete']       = {'guifg': s:salmon, 'guibg': 'NONE',    'gui': 'NONE'}
+let s:ColorAssignment['GitGutterChangeDelete'] = {'guifg': s:salmon, 'guibg': 'NONE',    'gui': 'NONE'}
+let s:ColorAssignment['SignColumn']            = {'guifg': 'NONE',   'guibg': 'NONE',    'gui': 'NONE'}
 
 
-for key in keys(ColorAssignment)
-    let s:colours = ColorAssignment[key]
-    if has_key(s:colours, "gui")
-        let gui = s:colours["gui"]
+for s:key in keys(s:ColorAssignment)
+    let s:colors = s:ColorAssignment[s:key]
+    if has_key(s:colors, 'gui')
+        let s:gui = s:colors['gui']
     else
-        let gui="NONE"
+        let s:gui='NONE'
     endif
-    if has_key(s:colours, "guifg")
-        let guifg = s:colours["guifg"]
+    if has_key(s:colors, 'guifg')
+        let s:guifg = s:colors['guifg']
     else
-        let guifg="NONE"
+        let s:guifg='NONE'
     endif
-    if has_key(s:colours, "guibg")
-        let guibg = s:colours["guibg"]
+    if has_key(s:colors, 'guibg')
+        let s:guibg = s:colors['guibg']
     else
-        let guibg="NONE"
+        let s:guibg='NONE'
     endif
-    if key =~ '^\k*$'
-        execute "hi ".key." gui=".gui." guifg=".guifg." guibg=".guibg
+    if s:key =~? '^\k*$'
+        execute 'hi '.s:key.' gui='.s:gui.' guifg='.s:guifg.' guibg='.s:guibg
     endif
 endfor
 
-"let &background = s:style
