@@ -9,79 +9,81 @@ let g:colors_name='black_sun'
 set t_Co=256
 
 " colors
-let s:black      = '#0C0C0C'
-let s:white      = '#CCCCCC'
-let s:grey       = '#4E4B59'
+"
+let s:black      = '#0c0c0c'
+let s:white      = '#cccccc'
+let s:grey       = '#4e4b59'
 let s:light_grey = '#888888'
 let s:dark_grey  = '#404040'
 let s:black_grey = '#121212'
-let s:white_grey = '#AAAAAA'
+let s:white_grey = '#aaaaaa'
 let s:blue_grey  = '#253340'
-let s:green_grey = '#151A1E'
+let s:green_grey = '#151a1e'
 let s:salmon     = '#d16969'
-let s:dark_red   = '#DC222C'
-let s:blue       = '#36A3D9'
-let s:dark_blue  = '#0040BB'
-let s:cyan       = '#78cffa'
-let s:magenta    = '#B233B2'
-let s:purple     = '#8733DB'
-let s:green      = '#009933'
+let s:red        = '#cf1720'
+let s:dark_red   = '#821717'
+let s:deep_blue  = '#154c79'
+let s:blue       = '#127da1'
+let s:cyan       = '#36a3d9'
+let s:dark_blue  = '#0040bb'
+let s:magenta    = '#b233b2'
+let s:purple     = '#8733db'
+let s:green      = '#174f17'
 let s:dark_green = '#005f00'
-let s:sage       = '#567E44'
-let s:orange     = '#EF6722'
-let s:aquamarine = '#95E6CB'
+let s:sage       = '#567e44'
+let s:orange     = '#ef6722'
+let s:aquamarine = '#22916c'
 let s:gold       = '#996600'
-let s:yellow     = '#9C9C00'
+let s:yellow     = '#9c9c00'
 
 
-" Vim Highlighting:
-" -------------------------------------------------------------------------
+" vim
+"
 let s:ColorAssignment = {}
 
 let s:ColorAssignment['Comment']      = {'guifg': s:dark_blue,    'guibg': 'NONE',       'gui': 'NONE'}
 
-" Constants
-let s:ColorAssignment['Constant']     = {'guifg': s:magenta,      'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Constant']     = {'guifg': s:aquamarine,   'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['String']       = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
 " Character
 " Number
 " Boolean
 " Float
 
-let s:ColorAssignment['Identifier']   = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Identifier']   = {'guifg': s:cyan,         'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Function']     = {'guifg': s:magenta,      'guibg': 'NONE',       'gui': 'NONE'}
 
 let s:ColorAssignment['Statement']    = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['Conditional']  = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Conditional']  = {'guifg': s:magenta,      'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Repeat']       = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
 " Label
 let s:ColorAssignment['Operator']     = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
 " Keyword
 " Exception
 
-let s:ColorAssignment['PreProc']      = {'guifg': s:dark_red,     'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['PreProc']      = {'guifg': s:red,          'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Include']      = {'guifg': s:aquamarine,   'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Define']       = {'guifg': s:aquamarine,   'guibg': 'NONE',       'gui': 'NONE'}
-" Macro
-let s:ColorAssignment['PreCondit']    = {'guifg': s:aquamarine,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Macro']        = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['PreCondit']    = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
 
 let s:ColorAssignment['Type']         = {'guifg': s:cyan,         'guibg': 'NONE',       'gui': 'NONE'}
-" StorageClass
-" Structure
-" Typedef
+let s:ColorAssignment['StorageClass'] = {'guifg': s:magenta,      'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Structure']    = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Typedef']      = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
 
-let s:ColorAssignment['Special']      = {'guifg': s:dark_red,     'guibg': 'NONE',       'gui': 'NONE'}
-" SpecialChar
+let s:ColorAssignment['Special']      = {'guifg': s:red,          'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['SpecialChar']  = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'underline'}
 " Tag
 " Delimiter
 " SpecialComment
 " Debug
 
-let s:ColorAssignment['Underlined']   = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Underlined']   = {'guifg': s:cyan,         'guibg': 'NONE',       'gui': 'underline'}
 
 let s:ColorAssignment['Ignore']       = {'guifg': s:light_grey,   'guibg': 'NONE',       'gui': 'NONE'}
 
-let s:ColorAssignment['Error']        = {'guifg': s:dark_red,     'guibg': s:black,      'gui': 'reverse'}
+let s:ColorAssignment['Error']        = {'guifg': s:red,          'guibg': s:black,      'gui': 'reverse'}
 
 let s:ColorAssignment['Todo']         = {'guifg': s:gold,         'guibg': s:black,      'gui': 'reverse'}
 
@@ -108,11 +110,11 @@ let s:ColorAssignment['LineNr']       = {'guifg': s:dark_grey,    'guibg': 'NONE
 let s:ColorAssignment['TermCursor']   = {'guifg': s:grey,         'guibg': s:black,      'gui': 'reverse'}
 
 let s:ColorAssignment['Directory']    = {'guifg': s:light_grey,   'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['DiffAdd']      = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['DiffChange']   = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['DiffDelete']   = {'guifg': s:salmon,       'guibg': s:black,      'gui': 'reverse'}
-let s:ColorAssignment['DiffText']     = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['ErrorMsg']     = {'guifg': s:dark_red,     'guibg': s:black,      'gui': 'standout'}
+let s:ColorAssignment['DiffAdd']      = {'guifg': s:black,        'guibg': s:green,      'gui': 'NONE'}
+let s:ColorAssignment['DiffChange']   = {'guifg': s:black,        'guibg': s:deep_blue,  'gui': 'NONE'}
+let s:ColorAssignment['DiffDelete']   = {'guifg': s:black,        'guibg': s:dark_red,   'gui': 'NONE'}
+let s:ColorAssignment['DiffText']     = {'guifg': s:black,        'guibg': s:blue,       'gui': 'NONE'}
+let s:ColorAssignment['ErrorMsg']     = {'guifg': s:red,          'guibg': s:black,      'gui': 'standout'}
 let s:ColorAssignment['VertSplit']    = {'guifg': s:green_grey,   'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Folded']       = {'guifg': s:blue_grey,    'guibg': s:white_grey, 'gui': 'standout'}
 let s:ColorAssignment['FoldColumn']   = {'guifg': s:white_grey,   'guibg': s:black_grey, 'gui': 'NONE'}
@@ -130,7 +132,7 @@ let s:ColorAssignment['PmenuThumb']   = {'guifg': s:white_grey,   'guibg': 'NONE
 let s:ColorAssignment['Question']     = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Search']       = {'guifg': s:purple,       'guibg': s:black,      'gui': 'reverse'}
 let s:ColorAssignment['SpecialKey']   = {'guifg': s:magenta,      'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['SpecialCap']   = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'underline'}
+let s:ColorAssignment['SpecialCap']   = {'guifg': s:cyan,         'guibg': 'NONE',       'gui': 'underline'}
 let s:ColorAssignment['SpellLocal']   = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'underline'}
 let s:ColorAssignment['SpellBad']     = {'guifg': s:salmon,       'guibg': 'NONE',       'gui': 'underline'}
 let s:ColorAssignment['SpellRare']    = {'guifg': s:aquamarine,   'guibg': 'NONE',       'gui': 'underline'}
@@ -148,12 +150,12 @@ let s:ColorAssignment['WarningMsg']   = {'guifg': s:salmon,       'guibg': 'NONE
 let s:ColorAssignment['LongLineWarning'] = {'guifg': s:gold,      'guibg': s:black,      'gui': 'reverse'}
 
 
-" bash
+" sh.vim
 "
 let s:ColorAssignment['shDoubleQuote'] = {'guifg': s:sage,        'guibg': 'NONE',       'gui': 'NONE'}
 
 
-" NerdTree:
+" NerdTree
 "
 let s:ColorAssignment['NERDTreeOpenable'] = {'guifg': s:grey,       'guibg': 'NONE',     'gui': 'NONE'}
 let s:ColorAssignment['NERDTreeClosable'] = {'guifg': s:light_grey, 'guibg': 'NONE',     'gui': 'NONE'}
@@ -170,7 +172,7 @@ let s:ColorAssignment['NERDTreeDirSlash'] = {'guifg': s:light_grey, 'guibg': 'NO
 " GitGutter
 "
 let s:ColorAssignment['GitGutterAdd']          = {'guifg': s:sage,   'guibg': 'NONE',    'gui': 'NONE'}
-let s:ColorAssignment['GitGutterChange']       = {'guifg': s:blue,   'guibg': 'NONE',    'gui': 'NONE'}
+let s:ColorAssignment['GitGutterChange']       = {'guifg': s:cyan,   'guibg': 'NONE',    'gui': 'NONE'}
 let s:ColorAssignment['GitGutterDelete']       = {'guifg': s:salmon, 'guibg': 'NONE',    'gui': 'NONE'}
 let s:ColorAssignment['GitGutterChangeDelete'] = {'guifg': s:salmon, 'guibg': 'NONE',    'gui': 'NONE'}
 let s:ColorAssignment['SignColumn']            = {'guifg': 'NONE',   'guibg': 'NONE',    'gui': 'NONE'}
