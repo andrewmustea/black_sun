@@ -17,32 +17,32 @@ let s:grey       = '#505050'
 let s:light_grey = '#888888'
 let s:charcoal   = '#404040'
 let s:white_grey = '#aaaaaa'
-let s:green_grey = '#151a1e'
+let s:teal_grey  = '#151a1e'
 
-let s:red        = '#cf1720'
+let s:red        = '#b02828'
 let s:dark_red   = '#821717'
 let s:salmon     = '#d16969'
 
+let s:blue       = '#0078c8'
 let s:deep_blue  = '#154c79'
 let s:denim_blue = '#127da1'
 let s:sky_blue   = '#36a3d9'
 let s:cobalt     = '#0040bb'
 let s:midnight   = '#253340'
-" aquamrine
-" turquoise
-" cyan
+let s:aquamrine  = '#7FFFD4'
+let s:cyan       = '#00FFFF'
 
 let s:purple     = '#8030e0'
 let s:magenta    = '#b030a0'
 let s:lavendar   = '#646695'
-" violet
 
 let s:green      = '#006000'
 let s:dark_green = '#174f17'
 let s:sage       = '#508040'
-let s:emerald    = '#22916c'
+let s:emerald    = '#109040'
+let s:turquoise  = '#1f9388'
 
-let s:orange     = '#ef6722'
+let s:orange     = '#f06722'
 let s:gold       = '#996600'
 
 let s:yellow     = '#9c9c00'
@@ -54,34 +54,34 @@ let s:ColorAssignment = {}
 
 let s:ColorAssignment['Comment']      = {'guifg': s:cobalt,       'guibg': 'NONE',       'gui': 'NONE'}
 
-let s:ColorAssignment['Constant']     = {'guifg': s:emerald,      'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Constant']     = {'guifg': s:sky_blue,     'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['String']       = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
-" Character
+let s:ColorAssignment['Character']    = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
 " Number
-" Boolean
+let s:ColorAssignment['Boolean']       = {'guifg': s:blue,        'guibg': 'NONE',       'gui': 'NONE'}
 " Float
 
 let s:ColorAssignment['Identifier']   = {'guifg': s:sky_blue,     'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Function']     = {'guifg': s:magenta,      'guibg': 'NONE',       'gui': 'NONE'}
 
 let s:ColorAssignment['Statement']    = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['Conditional']  = {'guifg': s:denim_blue,   'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['Repeat']       = {'guifg': s:denim_blue,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Conditional']  = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Repeat']       = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
 " Label
 let s:ColorAssignment['Operator']     = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
 " Keyword
 " Exception
 
 let s:ColorAssignment['PreProc']      = {'guifg': s:red,          'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['Include']      = {'guifg': s:emerald,      'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['Define']       = {'guifg': s:emerald,      'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Include']      = {'guifg': s:turquoise,    'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Define']       = {'guifg': s:denim_blue,   'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Macro']        = {'guifg': s:denim_blue,   'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['PreCondit']    = {'guifg': s:denim_blue,   'guibg': 'NONE',       'gui': 'NONE'}
 
-let s:ColorAssignment['Type']         = {'guifg': s:sky_blue,     'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Type']         = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['StorageClass'] = {'guifg': s:magenta,      'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['Structure']    = {'guifg': s:denim_blue,   'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['Typedef']      = {'guifg': s:denim_blue,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Structure']    = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Typedef']      = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
 
 let s:ColorAssignment['Special']      = {'guifg': s:red,          'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['SpecialChar']  = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'underline'}
@@ -105,17 +105,17 @@ let s:ColorAssignment['qfLineNr']     = {'guifg': s:orange,       'guibg': 'NONE
 " qfError
 
 let s:ColorAssignment['Conceal']      = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['CursorLineConceal'] = {'guifg': s:orange,  'guibg': s:green_grey, 'gui': 'NONE'}
+let s:ColorAssignment['CursorLineConceal'] = {'guifg': s:orange,  'guibg': s:teal_grey,  'gui': 'NONE'}
 
 let s:ColorAssignment['Normal']       = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['ColorColumn']  = {'guifg': 'NONE',         'guibg': s:green_grey, 'gui': 'NONE'}
+let s:ColorAssignment['ColorColumn']  = {'guifg': 'NONE',         'guibg': s:teal_grey,  'gui': 'NONE'}
 let s:ColorAssignment['Conceal']      = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Cursor']       = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['lCursor']      = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['CursorIM']     = {'guifg': s:white_grey,   'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['CursorColumn'] = {'guifg': 'NONE',         'guibg': s:green_grey, 'gui': 'NONE'}
-let s:ColorAssignment['CursorLine']   = {'guifg': 'NONE',         'guibg': s:green_grey, 'gui': 'NONE'}
-let s:ColorAssignment['CursorLineNr'] = {'guifg': s:white_grey,   'guibg': s:green_grey, 'gui': 'NONE'}
+let s:ColorAssignment['CursorColumn'] = {'guifg': 'NONE',         'guibg': s:teal_grey,  'gui': 'NONE'}
+let s:ColorAssignment['CursorLine']   = {'guifg': 'NONE',         'guibg': s:teal_grey,  'gui': 'NONE'}
+let s:ColorAssignment['CursorLineNr'] = {'guifg': s:white_grey,   'guibg': s:teal_grey,  'gui': 'NONE'}
 let s:ColorAssignment['LineNr']       = {'guifg': s:charcoal,     'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['TermCursor']   = {'guifg': s:grey,         'guibg': s:black,      'gui': 'reverse'}
 
@@ -125,7 +125,7 @@ let s:ColorAssignment['DiffChange']   = {'guifg': s:black,        'guibg': s:dee
 let s:ColorAssignment['DiffDelete']   = {'guifg': s:black,        'guibg': s:dark_red,   'gui': 'NONE'}
 let s:ColorAssignment['DiffText']     = {'guifg': s:black,        'guibg': s:denim_blue, 'gui': 'NONE'}
 let s:ColorAssignment['ErrorMsg']     = {'guifg': s:red,          'guibg': s:black,      'gui': 'standout'}
-let s:ColorAssignment['VertSplit']    = {'guifg': s:green_grey,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['VertSplit']    = {'guifg': s:teal_grey,    'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Folded']       = {'guifg': s:midnight,     'guibg': s:white_grey, 'gui': 'standout'}
 let s:ColorAssignment['FoldColumn']   = {'guifg': s:white_grey,   'guibg': s:black,      'gui': 'NONE'}
 let s:ColorAssignment['SignColumn']   = {'guifg': 'NONE',         'guibg': s:black,      'gui': 'NONE'}
@@ -188,7 +188,14 @@ let s:ColorAssignment['GitGutterChange']       = {'guifg': s:sky_blue, 'guibg': 
 let s:ColorAssignment['GitGutterDelete']       = {'guifg': s:salmon,   'guibg': 'NONE',  'gui': 'NONE'}
 let s:ColorAssignment['GitGutterChangeDelete'] = {'guifg': s:salmon,   'guibg': 'NONE',  'gui': 'NONE'}
 
+" vim-cpp-modern
+"
+let s:ColorAssignment['cppSTLnamespace'] = {'guifg': s:sky_blue,  'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['cppSTLvariable'] =  {'guifg': s:red,       'guibg': 'NONE',       'gui': 'NONE'}
 
+
+" highlighting
+"
 for s:key in keys(s:ColorAssignment)
     let s:colors = s:ColorAssignment[s:key]
     if has_key(s:colors, 'gui')
