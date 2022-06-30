@@ -1,12 +1,29 @@
 # black_sun
-A dark vim color scheme and airline theme.
 
-To get the color scheme, use vim-plug to install this repo, then add the black_sun colorscheme to your .vimrc or init.vim.
+A dark vim color scheme, airline theme, and lualine theme.
 
-To get the airline theme, use vim-plug to install this repo and run the add_airline_theme.sh script inside the black_sun plugin in your vim plugged directory.
+Heavily inspired by jellybeans and ayu_dark.
 
-Default vim plugin directory is: ~/.vim/plugged/
+To get either the vim colorscheme, airline theme, or lualine theme, use your favorite plugin manager to first install this repo. Then, add the corresponding lines to your configs below.
 
-Default neovim plugin directory is: ~/.local/share/nvim/plugged/
+## vim colorscheme
 
-TODO add pictures
+In your vimrc/init.vim
+
+    set termguicolors
+    syntax on
+    colorscheme black_sun
+
+## airline theme
+
+In your vimrc/init.vim
+
+    let g:airline_theme = 'black_sun'
+
+## lualine theme
+
+In your init.lua config:
+
+    require('lualine').setup { options = { theme = 'black_sun' } }
+
+TODO: add pictures
