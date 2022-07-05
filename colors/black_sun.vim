@@ -13,9 +13,11 @@ set t_Co=256
 "
 let s:black      = '#0c0c0c'
 let s:black_gray = '#151515'
+let s:dusk       = '#202020'
 let s:dark_gray  = '#262626'
 let s:charcoal   = '#404040'
 let s:gray       = '#505050'
+let s:steel_gray = '#606060'
 let s:light_gray = '#888888'
 let s:white_gray = '#aaaaaa'
 let s:white      = '#bbbbbb'
@@ -62,7 +64,7 @@ let s:ColorAssignment['Constant']     = {'guifg': s:sky_blue,     'guibg': 'NONE
 let s:ColorAssignment['String']       = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Character']    = {'guifg': s:sage,         'guibg': 'NONE',       'gui': 'NONE'}
 " Number
-let s:ColorAssignment['Boolean']       = {'guifg': s:blue,        'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Boolean']      = {'guifg': s:blue,         'guibg': 'NONE',       'gui': 'NONE'}
 " Float
 
 let s:ColorAssignment['Identifier']   = {'guifg': s:sky_blue,     'guibg': 'NONE',       'gui': 'NONE'}
@@ -105,7 +107,6 @@ let s:ColorAssignment['Todo']         = {'guifg': s:gold,         'guibg': s:bla
 
 let s:ColorAssignment['qfLineNr']     = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
 " qfFileName
-" qfLineNr
 " qfError
 
 let s:ColorAssignment['Conceal']      = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
@@ -158,33 +159,38 @@ let s:ColorAssignment['TabLineFill']  = {'guifg': s:dark_gray,    'guibg': s:bla
 let s:ColorAssignment['TabLineSel']   = {'guifg': s:blue,         'guibg': s:black,      'gui': 'reverse'}
 let s:ColorAssignment['Title']        = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Visual']       = {'guifg': 'NONE',         'guibg': s:midnight,   'gui': 'NONE'}
-" VisualNos
+let s:ColorAssignment['VisualNos']    = {'guifg': 'NONE',         'guibg': s:midnight,   'gui': 'NONE'}
 let s:ColorAssignment['WarningMsg']   = {'guifg': s:salmon,       'guibg': 'NONE',       'gui': 'NONE'}
 
 let s:ColorAssignment['LongLineWarning'] = {'guifg': s:gold,      'guibg': s:black,      'gui': 'reverse'}
 
-let s:ColorAssignment['RedrawDebugNormal']    = {'guifg': s:white_gray,      'guibg': s:black,      'gui': 'reverse'}
-let s:ColorAssignment['RedrawDebugClear']     = {'guifg': s:yellow,      'guibg': s:black,      'gui': 'reverse'}
-let s:ColorAssignment['RedrawDebugComposed']  = {'guifg': s:dark_green,      'guibg': s:black,      'gui': 'reverse'}
-let s:ColorAssignment['RedrawDebugRecompose'] = {'guifg': s:dark_red,      'guibg': s:black,      'gui': 'reverse'}
+let s:ColorAssignment['RedrawDebugNormal']    = {'guifg': s:white_gray, 'guibg': s:black, 'gui': 'reverse'}
+let s:ColorAssignment['RedrawDebugClear']     = {'guifg': s:yellow,     'guibg': s:black, 'gui': 'reverse'}
+let s:ColorAssignment['RedrawDebugComposed']  = {'guifg': s:dark_green, 'guibg': s:black, 'gui': 'reverse'}
+let s:ColorAssignment['RedrawDebugRecompose'] = {'guifg': s:dark_red,   'guibg': s:black, 'gui': 'reverse'}
 
 
 " nvim
 "
-let s:ColorAssignment['NvimInternalError'] = {'guifg': s:red,     'guibg': s:black,      'gui': 'reverse'}
+highlight! link NvimInternalError Error
+
+
+" vimscript
+"
+highlight! link vimFunction Function
 
 
 " sh.vim
 "
-let s:ColorAssignment['shDoubleQuote']    = {'guifg': s:sage,     'guibg': 'NONE',       'gui': 'NONE'}
+highlight! link shDoubleQuote String
 let s:ColorAssignment['shShellVariables'] = {'guifg': s:red,      'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['shDeref']          = {'guifg': s:red,      'guibg': 'NONE',       'gui': 'NONE'}
 
 
 " nvim-tree
 "
-let s:ColorAssignment['NvimTreeWindowPicker'] = {'guifg': s:magenta,  'guibg': s:black_gray, 'gui': 'NONE'}
-let s:ColorAssignment['NvimTreeRootFolder'] = {'guifg': s:denim_blue, 'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['NvimTreeWindowPicker'] = {'guifg': s:magenta,    'guibg': s:black_gray, 'gui': 'NONE'}
+let s:ColorAssignment['NvimTreeRootFolder']   = {'guifg': s:denim_blue, 'guibg': 'NONE',       'gui': 'NONE'}
 
 
 " NerdTree
@@ -205,41 +211,57 @@ let s:ColorAssignment['NERDTreeDirSlash'] = {'guifg': s:light_gray, 'guibg': 'NO
 "
 let s:ColorAssignment['GitGutterAdd']          = {'guifg': s:sage,     'guibg': 'NONE',  'gui': 'NONE'}
 let s:ColorAssignment['GitGutterChange']       = {'guifg': s:sky_blue, 'guibg': 'NONE',  'gui': 'NONE'}
-let s:ColorAssignment['GitGutterDelete']       = {'guifg': s:red,   'guibg': 'NONE',  'gui': 'NONE'}
-let s:ColorAssignment['GitGutterChangeDelete'] = {'guifg': s:red,   'guibg': 'NONE',  'gui': 'NONE'}
+let s:ColorAssignment['GitGutterDelete']       = {'guifg': s:red,      'guibg': 'NONE',  'gui': 'NONE'}
+let s:ColorAssignment['GitGutterChangeDelete'] = {'guifg': s:red,      'guibg': 'NONE',  'gui': 'NONE'}
 
 
 " bufferline.nvim
 "
-let s:ColorAssignment['BufferLineBufferSelected']      = {'guifg': s:white_gray, 'guibg': s:dark_blue, 'gui': 'NONE'}
-let s:ColorAssignment['BufferLineNumbersSelected']     = {'guifg': s:white_gray, 'guibg': s:dark_blue, 'gui': 'NONE'}
-let s:ColorAssignment['BufferLineModifiedSelected']    = {'guifg': s:sage,       'guibg': s:dark_blue, 'gui': 'NONE'}
-let s:ColorAssignment['BufferLineCloseButtonSelected'] = {'guifg': s:white_gray, 'guibg': s:dark_blue, 'gui': 'NONE'}
-let s:ColorAssignment['BufferLineSeparatorSelected']   = {'guifg': s:black,      'guibg': s:dark_blue, 'gui': 'NONE'}
+let s:ColorAssignment['BufferLineBufferSelected']      = {'guifg': s:white_gray, 'guibg': s:dark_blue,  'gui': 'NONE'}
+let s:ColorAssignment['BufferLineNumbersSelected']     = {'guifg': s:white_gray, 'guibg': s:dark_blue,  'gui': 'NONE'}
+let s:ColorAssignment['BufferLineDuplicateSelected']   = {'guifg': s:white_gray, 'guibg': s:dark_blue,  'gui': 'NONE'}
+let s:ColorAssignment['BufferLineModifiedSelected']    = {'guifg': s:sage,       'guibg': s:dark_blue,  'gui': 'NONE'}
+let s:ColorAssignment['BufferLineCloseButtonSelected'] = {'guifg': s:white_gray, 'guibg': s:dark_blue,  'gui': 'NONE'}
+let s:ColorAssignment['BufferLineSeparatorSelected']   = {'guifg': s:black,      'guibg': s:dark_blue,  'gui': 'NONE'}
 
-let s:ColorAssignment['BufferLineBufferVisible']       = {'guifg': s:blue_gray,  'guibg': s:black_gray,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineNumbersVisible']      = {'guifg': s:blue_gray,  'guibg': s:black_gray,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineModifiedVisible']     = {'guifg': s:sage,       'guibg': s:black_gray,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineCloseButtonVisible']  = {'guifg': s:blue_gray, 'guibg': s:dark_blue, 'gui': 'NONE'}
-let s:ColorAssignment['BufferLineSeparatorVisible']    = {'guifg': s:black,      'guibg': s:black_gray,     'gui': 'NONE'}
+let s:ColorAssignment['BufferLineBufferVisible']       = {'guifg': s:steel_gray,  'guibg': s:dusk,      'gui': 'NONE'}
+let s:ColorAssignment['BufferLineNumbersVisible']      = {'guifg': s:steel_gray,  'guibg': s:dusk,      'gui': 'NONE'}
+let s:ColorAssignment['BufferLineDuplicateVisible']    = {'guifg': s:steel_gray,  'guibg': s:dusk,      'gui': 'NONE'}
+let s:ColorAssignment['BufferLineModifiedVisible']     = {'guifg': s:sage,        'guibg': s:dusk,      'gui': 'NONE'}
+let s:ColorAssignment['BufferLineCloseButtonVisible']  = {'guifg': s:steel_gray,  'guibg': s:dusk,      'gui': 'NONE'}
+let s:ColorAssignment['BufferLineSeparatorVisible']    = {'guifg': s:black,       'guibg': s:dusk,      'gui': 'NONE'}
 
-let s:ColorAssignment['BufferLineBuffer']              = {'guifg': s:blue_gray,  'guibg': s:black_gray,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineNumbers']             = {'guifg': s:blue_gray,  'guibg': s:black_gray,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineModified']            = {'guifg': s:sage,       'guibg': s:black_gray,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineCloseButton']         = {'guifg': s:blue_gray, 'guibg': s:black_gray,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineSeparator']           = {'guifg': s:black,      'guibg': s:black_gray,      'gui': 'NONE'}
+let s:ColorAssignment['BufferLineBuffer']              = {'guifg': s:blue_gray,  'guibg': s:black_gray, 'gui': 'NONE'}
+let s:ColorAssignment['BufferLineNumbers']             = {'guifg': s:blue_gray,  'guibg': s:black_gray, 'gui': 'NONE'}
+let s:ColorAssignment['BufferLineDuplicate']           = {'guifg': s:blue_gray,  'guibg': s:black_gray, 'gui': 'NONE'}
+let s:ColorAssignment['BufferLineModified']            = {'guifg': s:sage,       'guibg': s:black_gray, 'gui': 'NONE'}
+let s:ColorAssignment['BufferLineCloseButton']         = {'guifg': s:blue_gray,  'guibg': s:black_gray, 'gui': 'NONE'}
+let s:ColorAssignment['BufferLineSeparator']           = {'guifg': s:black,      'guibg': s:black_gray, 'gui': 'NONE'}
 
+let s:ColorAssignment['BufferLineTab']                 = {'guifg': s:blue_gray,  'guibg': s:black,      'gui': 'NONE'}
+let s:ColorAssignment['BufferLineTabSelected']         = {'guifg': s:white_gray, 'guibg': s:dark_blue,  'gui': 'NONE'}
 let s:ColorAssignment['BufferLineTabClose']            = {'guifg': s:white_gray, 'guibg': s:black,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineBackground']          = {'guifg': s:blue_gray,  'guibg': s:black_gray,     'gui': 'NONE'}
+let s:ColorAssignment['BufferLineBackground']          = {'guifg': s:blue_gray,  'guibg': s:black_gray, 'gui': 'NONE'}
 
 
 " vim-cpp-modern
 "
 let s:ColorAssignment['cppSTLnamespace'] = {'guifg': s:sky_blue,  'guibg': 'NONE',       'gui': 'NONE'}
-let s:ColorAssignment['cppSTLvariable'] =  {'guifg': s:red,       'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['cppSTLvariable']  = {'guifg': s:red,       'guibg': 'NONE',       'gui': 'NONE'}
 
 
-" highlighting
+" nvim-treesitter
+"
+
+" sh
+let s:ColorAssignment['bashTSFuncBuiltin']  = {'guifg': s:orange,     'guibg': 'NONE',    'gui': 'NONE'}
+
+" vimscript
+let s:ColorAssignment['vimTSNamespace']     = {'guifg': s:blue,       'guibg': 'NONE',    'gui': 'NONE'}
+let s:ColorAssignment['vimTSStringSpecial'] = {'guifg': s:denim_blue, 'guibg': 'NONE',    'gui': 'NONE'}
+
+
+" assignment
 "
 for s:key in keys(s:ColorAssignment)
     let s:colors = s:ColorAssignment[s:key]
