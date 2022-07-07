@@ -254,6 +254,7 @@ let s:ColorAssignment['cppSTLvariable']  = {'guifg': s:red,       'guibg': 'NONE
 "
 
 " sh
+highlight! link bashTSVariable shShellVariables
 let s:ColorAssignment['bashTSFuncBuiltin']  = {'guifg': s:orange,     'guibg': 'NONE',    'gui': 'NONE'}
 
 " vimscript
