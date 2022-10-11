@@ -215,35 +215,6 @@ let s:ColorAssignment['GitGutterDelete']       = {'guifg': s:red,      'guibg': 
 let s:ColorAssignment['GitGutterChangeDelete'] = {'guifg': s:red,      'guibg': 'NONE',  'gui': 'NONE'}
 
 
-" bufferline.nvim
-"
-let s:ColorAssignment['BufferLineBufferSelected']      = {'guifg': s:white_gray, 'guibg': s:dark_blue,  'gui': 'NONE'}
-let s:ColorAssignment['BufferLineNumbersSelected']     = {'guifg': s:white_gray, 'guibg': s:dark_blue,  'gui': 'NONE'}
-let s:ColorAssignment['BufferLineDuplicateSelected']   = {'guifg': s:white_gray, 'guibg': s:dark_blue,  'gui': 'NONE'}
-let s:ColorAssignment['BufferLineModifiedSelected']    = {'guifg': s:sage,       'guibg': s:dark_blue,  'gui': 'NONE'}
-let s:ColorAssignment['BufferLineCloseButtonSelected'] = {'guifg': s:white_gray, 'guibg': s:dark_blue,  'gui': 'NONE'}
-let s:ColorAssignment['BufferLineSeparatorSelected']   = {'guifg': s:black,      'guibg': s:dark_blue,  'gui': 'NONE'}
-
-let s:ColorAssignment['BufferLineBufferVisible']       = {'guifg': s:steel_gray,  'guibg': s:dusk,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineNumbersVisible']      = {'guifg': s:steel_gray,  'guibg': s:dusk,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineDuplicateVisible']    = {'guifg': s:steel_gray,  'guibg': s:dusk,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineModifiedVisible']     = {'guifg': s:sage,        'guibg': s:dusk,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineCloseButtonVisible']  = {'guifg': s:steel_gray,  'guibg': s:dusk,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineSeparatorVisible']    = {'guifg': s:black,       'guibg': s:dusk,      'gui': 'NONE'}
-
-let s:ColorAssignment['BufferLineBuffer']              = {'guifg': s:blue_gray,  'guibg': s:black_gray, 'gui': 'NONE'}
-let s:ColorAssignment['BufferLineNumbers']             = {'guifg': s:blue_gray,  'guibg': s:black_gray, 'gui': 'NONE'}
-let s:ColorAssignment['BufferLineDuplicate']           = {'guifg': s:blue_gray,  'guibg': s:black_gray, 'gui': 'NONE'}
-let s:ColorAssignment['BufferLineModified']            = {'guifg': s:sage,       'guibg': s:black_gray, 'gui': 'NONE'}
-let s:ColorAssignment['BufferLineCloseButton']         = {'guifg': s:blue_gray,  'guibg': s:black_gray, 'gui': 'NONE'}
-let s:ColorAssignment['BufferLineSeparator']           = {'guifg': s:black,      'guibg': s:black_gray, 'gui': 'NONE'}
-
-let s:ColorAssignment['BufferLineTab']                 = {'guifg': s:blue_gray,  'guibg': s:black,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineTabSelected']         = {'guifg': s:white_gray, 'guibg': s:dark_blue,  'gui': 'NONE'}
-let s:ColorAssignment['BufferLineTabClose']            = {'guifg': s:white_gray, 'guibg': s:black,      'gui': 'NONE'}
-let s:ColorAssignment['BufferLineBackground']          = {'guifg': s:blue_gray,  'guibg': s:black_gray, 'gui': 'NONE'}
-
-
 " vim-cpp-modern
 "
 let s:ColorAssignment['cppSTLnamespace'] = {'guifg': s:sky_blue,  'guibg': 'NONE',       'gui': 'NONE'}
