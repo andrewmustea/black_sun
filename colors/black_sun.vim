@@ -112,7 +112,7 @@ let s:ColorAssignment['qfLineNr']     = {'guifg': s:orange,       'guibg': 'NONE
 let s:ColorAssignment['Conceal']      = {'guifg': s:orange,       'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['CursorLineConceal'] = {'guifg': s:orange,  'guibg': s:teal_gray,  'gui': 'NONE'}
 
-let s:ColorAssignment['Normal']       = {'guifg': s:white_gray,   'guibg': 'NONE',       'gui': 'NONE'}
+let s:ColorAssignment['Normal']       = {'guifg': s:white_gray,   'guibg': s:black,       'gui': 'NONE'}
 let s:ColorAssignment['ColorColumn']  = {'guifg': 'NONE',         'guibg': s:teal_gray,  'gui': 'NONE'}
 let s:ColorAssignment['Conceal']      = {'guifg': s:white_gray,   'guibg': 'NONE',       'gui': 'NONE'}
 let s:ColorAssignment['Cursor']       = {'guifg': s:white_gray,   'guibg': 'NONE',       'gui': 'NONE'}
