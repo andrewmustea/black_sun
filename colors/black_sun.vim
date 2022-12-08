@@ -139,8 +139,8 @@ highlight! clear CursorIM
 highlight! clear TermCursorNC
 
 " searching
-let s:highlights['Search']    = { 'guifg': s:black, 'guibg': s:purple }
-let s:highlights['IncSearch'] = { 'guifg': s:black, 'guibg': s:lavendar }
+let s:highlights['Search']    = { 'guifg': s:purple,   'guibg': s:black, 'gui': 'reverse' }
+let s:highlights['IncSearch'] = { 'guifg': s:lavendar, 'guibg': s:black, 'gui': 'reverse' }
 highlight! link Substitute Search
 highlight! clear CurSearch
 
