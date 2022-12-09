@@ -231,14 +231,14 @@ let s:highlights['DiagnosticUnderlineError'] = { 'guifg': 'NONE',       'guibg':
 let s:highlights['DiagnosticUnderlineWarn']  = { 'guifg': 'NONE',       'guibg': 'NONE', 'gui': 'underline' }
 let s:highlights['DiagnosticUnderlineInfo']  = { 'guifg': 'NONE',       'guibg': 'NONE', 'gui': 'underline' }
 let s:highlights['DiagnosticUnderlineHint']  = { 'guifg': 'NONE',       'guibg': 'NONE', 'gui': 'underline' }
-let s:highlights['DiagnosticSignError']      = { 'guifg': s:red,        'guibg': 'NONE', 'gui': 'reverse' }
-let s:highlights['DiagnosticSignWarn']       = { 'guifg': s:gold,       'guibg': 'NONE', 'gui': 'reverse' }
-let s:highlights['DiagnosticSignInfo']       = { 'guifg': s:deep_blue,  'guibg': 'NONE', 'gui': 'reverse' }
-let s:highlights['DiagnosticSignHint']       = { 'guifg': s:gray88,     'guibg': 'NONE', 'gui': 'reverse' }
 highlight! link DiagnosticFloatingError    DiagnosticError
 highlight! link DiagnosticFloatingHint     DiagnosticHint
 highlight! link DiagnosticFloatingInfo     DiagnosticInfo
 highlight! link DiagnosticFloatingWarn     DiagnosticWarn
+highlight! link DiagnosticSignError        DiagnosticSign
+highlight! link DiagnosticSignHint         DiagnosticSign
+highlight! link DiagnosticSignInfo         DiagnosticSign
+highlight! link DiagnosticSignWarn         DiagnosticSign
 highlight! link DiagnosticVirtualTextError DiagnosticError
 highlight! link DiagnosticVirtualTextHint  DiagnosticHint
 highlight! link DiagnosticVirtualTextInfo  DiagnosticInfo
@@ -268,9 +268,9 @@ let s:highlights['GitGutterDelete']       = { 'guifg': s:red,      'guibg': 'NON
 let s:highlights['GitGutterChangeDelete'] = { 'guifg': s:red,      'guibg': 'NONE' }
 
 " ale
-highlight! link ALEInfoSign         DiagnosticSignInfo
-highlight! link ALEStyleWarningSign DiagnosticSignWarn
-highlight! link ALEWarningSign      DiagnosticSignWarn
+let s:highlights['ALEInfoSign']         = { 'guifg': s:deep_blue,  'guibg': 'NONE', 'gui': 'reverse' }
+let s:highlights['ALEStyleWarningSign'] = { 'guifg': s:gold,       'guibg': 'NONE', 'gui': 'reverse' }
+let s:highlights['ALEWarningSign']      = { 'guifg': s:gold,       'guibg': 'NONE', 'gui': 'reverse' }
 
 " nvim-tree
 let s:highlights['NvimTreeWindowPicker'] = { 'guifg': s:magenta, 'guibg': s:gray15 }
@@ -281,9 +281,6 @@ highlight! link bashTSVariable shShellVariables
 let s:highlights['bashTSFuncBuiltin']  = { 'guifg': s:red_orange, 'guibg': 'NONE' }
 let s:highlights['vimTSNamespace']     = { 'guifg': s:blue,       'guibg': 'NONE' }
 let s:highlights['vimTSStringSpecial'] = { 'guifg': s:denim,      'guibg': 'NONE' }
-
-" coc.nvim
-highlight! link CocHintSign DiagnosticHint
 
 
 " highlighting
