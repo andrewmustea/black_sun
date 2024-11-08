@@ -1,44 +1,49 @@
-local colors = {
-  black_gray   = '#151515',
-  dark_gray    = '#262626',
-  blue_gray    = '#4f5b66',
-  gray         = '#666666',
-  white_gray   = '#bbbbbb',
-  white        = '#d8dee9',
-  red          = '#800000',
-  green        = '#144714',
-  blue         = '#08467c',
-  orange       = '#a03800',
-}
+#!/usr/bin/env lua
+
+--
+-- lua/lualine/themes/black_sun.lua
+--
+
+local black_gray = "#151515"
+local dark_gray  = "#262626"
+local blue_gray  = "#4f5b66"
+local gray       = "#666666"
+local white_gray = "#bbbbbb"
+local white      = "#d8dee9"
+local red        = "#800000"
+local green      = "#144714"
+local blue       = "#08467c"
+local orange     = "#a03800"
+
 return {
   normal = {
-    a = {bg = colors.blue,       fg = colors.white,       gui = 'bold'},
-    b = {bg = colors.dark_gray,  fg = colors.white_gray},
-    c = {bg = colors.black_gray, fg = colors.blue_gray}
+    a = { bg = blue,       fg = white,       gui = "bold" },
+    b = { bg = dark_gray,  fg = white_gray},
+    c = { bg = black_gray, fg = blue_gray}
   },
   insert = {
-    a = {bg = colors.green,      fg = colors.white_gray,  gui = 'bold'},
-    b = {bg = colors.dark_gray,  fg = colors.white_gray},
-    c = {bg = colors.black_gray, fg = colors.blue_gray}
+    a = { bg = green,      fg = white_gray,  gui = 'bold'},
+    b = { bg = dark_gray,  fg = white_gray},
+    c = { bg = black_gray, fg = blue_gray}
   },
   visual = {
-    a = {bg = colors.red,        fg = colors.white_gray,  gui = 'bold'},
-    b = {bg = colors.dark_gray,  fg = colors.white_gray},
-    c = {bg = colors.black_gray, fg = colors.blue_gray}
+    a = { bg = red,        fg = white_gray,  gui = 'bold'},
+    b = { bg = dark_gray,  fg = white_gray},
+    c = { bg = black_gray, fg = blue_gray}
   },
   replace = {
-    a = {bg = colors.orange,     fg = colors.white_gray,  gui = 'bold'},
-    b = {bg = colors.dark_gray,  fg = colors.white_gray},
-    c = {bg = colors.black_gray, fg = colors.blue_gray}
+    a = { bg = orange,     fg = white_gray,  gui = 'bold'},
+    b = { bg = dark_gray,  fg = white_gray},
+    c = { bg = black_gray, fg = blue_gray}
   },
   command = {
-    a = {bg = colors.blue,       fg = colors.white,       gui = 'bold'},
-    b = {bg = colors.dark_gray,  fg = colors.white_gray},
-    c = {bg = colors.black_gray, fg = colors.blue_gray}
+    a = { bg = blue,       fg = white,       gui = 'bold'},
+    b = { bg = dark_gray,  fg = white_gray},
+    c = { bg = black_gray, fg = blue_gray}
   },
   inactive = {
-    a = {bg = colors.dark_gray,  fg = colors.gray,        gui = 'bold'},
-    b = {bg = colors.black_gray, fg = colors.blue_gray},
-    c = {bg = colors.black_gray, fg = colors.blue_gray}
+    a = { bg = dark_gray,  fg = gray,        gui = 'bold'},
+    b = { bg = black_gray, fg = blue_gray},
+    c = { bg = black_gray, fg = blue_gray}
   }
 }

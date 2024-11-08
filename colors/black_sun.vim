@@ -213,11 +213,11 @@ let s:highlights['DiffDelete'] = { 'guifg': s:black, 'guibg': s:dark_red }
 let s:highlights['DiffText']   = { 'guifg': s:black, 'guibg': s:denim }
 
 " menus
-let s:highlights['Pmenu']      = {'guifg': s:grayAA, 'guibg': s:gray26 }
-let s:highlights['PmenuSbar']  = {'guifg': 'NONE',   'guibg': s:gray40 }
-let s:highlights['PmenuSel']   = {'guifg': s:grayAA, 'guibg': s:midnight }
-let s:highlights['PmenuThumb'] = {'guifg': 'NONE',   'guibg': s:gray60 }
-let s:highlights['WildMenu']   = {'guifg': s:black,  'guibg': s:deep_blue }
+let s:highlights['Pmenu']      = { 'guifg': s:grayAA, 'guibg': s:gray26 }
+let s:highlights['PmenuSbar']  = { 'guifg': 'NONE',   'guibg': s:gray40 }
+let s:highlights['PmenuSel']   = { 'guifg': s:grayAA, 'guibg': s:midnight }
+let s:highlights['PmenuThumb'] = { 'guifg': 'NONE',   'guibg': s:gray60 }
+let s:highlights['WildMenu']   = { 'guifg': s:black,  'guibg': s:deep_blue }
 
 " directories
 let s:highlights['Directory'] = { 'guifg': s:blue, 'guibg': 'NONE' }
