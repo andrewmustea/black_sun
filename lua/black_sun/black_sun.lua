@@ -8,9 +8,6 @@
 -- settings
 -- --------
 
--- set background color
-vim.o.background = "dark"
-
 -- clear existing highlights
 vim.cmd("highlight clear")
 
@@ -19,11 +16,11 @@ if vim.fn.exists("syntax_on") == 1 then
     vim.cmd("syntax reset")
 end
 
--- set colorscheme name
+-- colorscheme name
 vim.g.colors_name = "black_sun"
 
--- set terminal colors (if needed)
--- vim.o.t_Co = "256"
+-- set background color
+vim.o.background = "dark"
 
 
 -- colors
@@ -88,222 +85,215 @@ local yellow     = "#9c9c00"
 -- color assignments
 -- -----------------
 
-local highlights = {}
-
--- normal
-highlights["Normal"] = { fg = grayAA, bg = black }
-vim.cmd("highlight! link NormalFloat Pmenu")
-vim.cmd("highlight! clear NormalNC")
-
--- visual
-highlights["Visual"] = { bg = midnight }
-vim.cmd("highlight! clear VisualNos")
-
--- windows
-highlights["VertSplit"] = { fg = teal_gray }
-vim.cmd("highlight! link WinSeparator VertSplit")
-vim.cmd("highlight! clear WinBar")
-vim.cmd("highlight! clear WinBarNC")
-
--- lines and columns
-highlights["ColorColumn"] = { bg = gray10 }
-highlights["FoldColumn"] = { fg = grayAA, bg = gray40 }
-highlights["Folded"] = { fg = midnight, bg = gray88, standout = true }
-highlights["LineNr"] = { fg = gray40 }
-highlights["SignColumn"] = { bg = black }
-highlights["QuickFixLine"] = { bg = gray20 }
-vim.cmd("highlight! link LineNrAbove LineNr")
-vim.cmd("highlight! link LineNrBelow LineNr")
-
--- status line
-highlights["ModeMsg"] = { fg = sage }
-highlights["StatusLine"] = { fg = grayAA }
-highlights["StatusLineNC"] = { fg = gray50 }
-
--- tabline
-highlights["TabLine"] = { fg = blue_gray, bg = gray15 }
-highlights["TabLineFill"] = { fg = gray26, bg = black }
-highlights["TabLineSel"] = { fg = grayAA, bg = dark_blue }
-
--- prompts
-highlights["Error"] = { fg = black, bg = red }
-highlights["MoreMsg"] = { fg = sage }
-highlights["Question"] = { fg = sage }
-highlights["WarningMsg"] = { fg = orange }
-vim.cmd("highlight! link ErrorMsg Error")
-vim.cmd("highlight! link MsgSeparator StatusLine")
-vim.cmd("highlight! clear MsgArea")
-
--- cursor
-highlights["Conceal"] = { fg = grayAA }
-highlights["Cursor"] = { fg = grayAA }
-highlights["CursorColumn"] = { bg = teal_gray }
-highlights["CursorLine"] = { bg = teal_gray }
-highlights["CursorLineConceal"] = { fg = red_orange, bg = teal_gray }
-highlights["CursorLineNr"] = { fg = grayAA, bg = teal_gray }
-highlights["TermCursor"] = { fg = black, bg = grayAA }
-vim.cmd("highlight! link CursorLineSign SignColumn")
-vim.cmd("highlight! link lCursor Cursor")
-vim.cmd("highlight! clear CursorIM")
-vim.cmd("highlight! clear TermCursorNC")
-
--- searching
-highlights["Search"] = { fg = purple, bg = black, reverse = true }
-highlights["IncSearch"] = { fg = lavendar, bg = black, reverse = true }
-vim.cmd("highlight! link Substitute Search")
-vim.cmd("highlight! clear CurSearch")
-
--- comments
-highlights["Comment"] = { fg = cobalt }
-
--- constants
-highlights["Boolean"] = { fg = blue }
-highlights["Character"] = { fg = sage }
-highlights["Constant"] = { fg = sky_blue }
-highlights["String"] = { fg = sage }
-vim.cmd("highlight! link Float Constant")
-vim.cmd("highlight! link Number Constant")
-
--- identifiers
-highlights["Function"] = { fg = magenta }
-highlights["Identifier"] = { fg = sky_blue }
-
--- statements
-highlights["Conditional"] = { fg = blue }
-highlights["Operator"] = { fg = grayAA }
-highlights["Repeat"] = { fg = blue }
-highlights["Statement"] = { fg = red_orange }
-vim.cmd("highlight! link Exception Statement")
-vim.cmd("highlight! link Keyword Statement")
-vim.cmd("highlight! link Label Statement")
-
--- preprocessor
-highlights["Define"] = { fg = denim }
-highlights["Include"] = { fg = turquoise }
-highlights["Macro"] = { fg = denim }
-highlights["PreCondit"] = { fg = denim }
-highlights["PreProc"] = { fg = red }
-
--- types
-highlights["StorageClass"] = { fg = magenta }
-highlights["Structure"] = { fg = red_orange }
-highlights["Type"] = { fg = blue }
-highlights["Typedef"] = { fg = red_orange }
-
--- special
-highlights["Ignore"] = { fg = gray50 }
-highlights["MatchParen"] = { fg = grayAA, underline = true }
-highlights["Special"] = { fg = red }
-highlights["SpecialChar"] = { fg = sage, underline = true }
-highlights["Title"] = { fg = red_orange }
-highlights["Todo"] = { fg = gray88, bold = true }
-highlights["Underlined"] = { fg = sky_blue, underline = true }
-vim.cmd("highlight! link Debug Special")
-vim.cmd("highlight! link Delimitter Special")
-vim.cmd("highlight! link SpecialComment Special")
-vim.cmd("highlight! link Tag Special")
-
--- nontext
-highlights["NonText"] = { fg = gray50 }
-highlights["SpecialKey"] = { fg = magenta }
-vim.cmd("highlight! link EndOfBuffer NonText")
-vim.cmd("highlight! link Whitespace NonText")
-
--- spelling
-highlights["SpellBad"] = { fg = salmon, underline = true }
-highlights["SpellCap"] = { fg = salmon, underline = true }
-highlights["SpellLocal"] = { fg = red_orange, underline = true }
-highlights["SpellRare"] = { fg = emerald, underline = true }
-
--- diff
-highlights["DiffAdd"] = { fg = black, bg = dark_green }
-highlights["DiffChange"] = { fg = black, bg = deep_blue }
-highlights["DiffDelete"] = { fg = black, bg = dark_red }
-highlights["DiffText"] = { fg = black, bg = denim }
-
--- menus
-highlights["Pmenu"] = { fg = grayAA, bg = gray26 }
-highlights["PmenuSbar"] = { bg = gray40 }
-highlights["PmenuSel"] = { fg = grayAA, bg = midnight }
-highlights["PmenuThumb"] = { bg = gray60 }
-highlights["WildMenu"] = { fg = black, bg = deep_blue }
-
--- directories
-highlights["Directory"] = { fg = blue }
-
--- diagnostics
-highlights["DiagnosticError"] = { fg = bright_red }
-highlights["DiagnosticWarn"] = { fg = orange }
-highlights["DiagnosticInfo"] = { fg = light_blue }
-highlights["DiagnosticHint"] = { fg = grayAA }
-highlights["DiagnosticUnderlineError"] = { underline = true }
-highlights["DiagnosticUnderlineWarn"] = { underline = true }
-highlights["DiagnosticUnderlineInfo"] = { underline = true }
-highlights["DiagnosticUnderlineHint"] = { underline = true }
-vim.cmd("highlight! link DiagnosticFloatingError DiagnosticError")
-vim.cmd("highlight! link DiagnosticFloatingHint DiagnosticHint")
-vim.cmd("highlight! link DiagnosticFloatingInfo DiagnosticInfo")
-vim.cmd("highlight! link DiagnosticFloatingWarn DiagnosticWarn")
-vim.cmd("highlight! link DiagnosticSignError DiagnosticSign")
-vim.cmd("highlight! link DiagnosticSignHint DiagnosticSign")
-vim.cmd("highlight! link DiagnosticSignInfo DiagnosticSign")
-vim.cmd("highlight! link DiagnosticSignWarn DiagnosticSign")
-vim.cmd("highlight! link DiagnosticVirtualTextError DiagnosticError")
-vim.cmd("highlight! link DiagnosticVirtualTextHint DiagnosticHint")
-vim.cmd("highlight! link DiagnosticVirtualTextInfo DiagnosticInfo")
-vim.cmd("highlight! link DiagnosticVirtualTextWarn DiagnosticWarn")
-
--- redrawdebug
-highlights["RedrawDebugNormal"] = { fg = black, bg = gray88 }
-highlights["RedrawDebugClear"] = { fg = black, bg = yellow }
-vim.cmd("highlight! link RedrawDebugComposed DiffAdd")
-vim.cmd("highlight! link RedrawDebugRecompose DiffDelete")
-
--- nvim
-vim.cmd("highlight! link NvimInternalError Error")
-
--- vimscript
-vim.cmd("highlight! link vimFunction Function")
-
--- sh
-vim.cmd("highlight! link shDoubleQuote String")
-highlights["shShellVariables"] = { fg = red }
-highlights["shDeref"] = { fg = red }
-
--- GitGutter/gitsigns
-highlights["GitGutterAdd"] = { fg = sage }
-highlights["GitGutterChange"] = { fg = sky_blue }
-highlights["GitGutterDelete"] = { fg = red }
-highlights["GitGutterChangeDelete"] = { fg = red }
-
--- ale
-highlights["ALEInfoSign"] = { fg = deep_blue, reverse = true }
-highlights["ALEStyleWarningSign"] = { fg = gold, reverse = true }
-highlights["ALEWarningSign"] = { fg = gold, reverse = true }
-
--- nvim-tree
-highlights["NvimTreeWindowPicker"] = { fg = magenta, bg = gray15 }
-highlights["NvimTreeRootFolder"] = { fg = denim }
-
--- nvim-treesitter
-vim.cmd("highlight! link bashTSVariable shShellVariables")
-highlights["bashTSFuncBuiltin"] = { fg = red_orange }
-highlights["vimTSNamespace"] = { fg = blue }
-highlights["vimTSStringSpecial"] = { fg = denim }
-
-
--- apply highlight groups
--- ----------------------
-
-for group, highlight in pairs(highlights) do
- -- set default values if keys are missing
- -- highlight.gui = highlight.gui or "NONE"
- -- highlight.fg = highlight.fg or "NONE"
- -- highlight.bg = highlight.bg or "NONE"
-
- -- apply the highlight group only if the group name is not empty
- -- if group:match("^%w*$") then
- vim.api.nvim_set_hl(0, group, highlight)
- -- end
+local function set_hl(hl, tbl)
+  vim.api.nvim_set_hl(0, hl, tbl)
 end
 
+local function clear_hl(hl)
+  set_hl(hl, { })
+end
+
+local function link_hl(hl, hl_link)
+  set_hl(hl, { link = hl_link })
+end
+
+-- normal
+set_hl("Normal", { fg = grayAA, bg = black })
+link_hl("NormalFloat", "Pmenu")
+clear_hl("NormalNC")
+
+-- visual
+set_hl("Visual", { bg = midnight })
+clear_hl("VisualNos")
+
+-- windows
+set_hl("VertSplit", { fg = teal_gray })
+link_hl("WinSeparator", "VertSplit")
+clear_hl("WinBar")
+clear_hl("WinBarNC")
+
+-- lines and columns
+set_hl("ColorColumn", { bg = gray10 })
+set_hl("FoldColumn", { fg = grayAA, bg = gray40 })
+set_hl("Folded", { fg = midnight, bg = gray88, standout = true })
+set_hl("LineNr", { fg = gray40 })
+set_hl("SignColumn", { bg = black })
+set_hl("QuickFixLine", { bg = gray20 })
+link_hl("LineNrAbove", "LineNr")
+link_hl("LineNrBelow", "LineNr")
+
+-- status line
+set_hl("ModeMsg", { fg = sage })
+set_hl("StatusLine", { fg = grayAA })
+set_hl("StatusLineNC", { fg = gray50 })
+
+-- tabline
+set_hl("TabLine", { fg = blue_gray, bg = gray15 })
+set_hl("TabLineFill", { fg = gray26, bg = black })
+set_hl("TabLineSel", { fg = grayAA, bg = dark_blue })
+
+-- prompts
+set_hl("Error", { fg = black, bg = red })
+set_hl("MoreMsg", { fg = sage })
+set_hl("Question", { fg = sage })
+set_hl("WarningMsg", { fg = orange })
+link_hl("ErrorMsg", "Error")
+link_hl("MsgSeparator", "StatusLine")
+clear_hl("MsgArea")
+
+-- cursor
+set_hl("Conceal", { fg = grayAA })
+set_hl("Cursor", { fg = grayAA })
+set_hl("CursorColumn", { bg = teal_gray })
+set_hl("CursorLine", { bg = teal_gray })
+set_hl("CursorLineConceal", { fg = red_orange, bg = teal_gray })
+set_hl("CursorLineNr", { fg = grayAA, bg = teal_gray })
+set_hl("TermCursor", { fg = black, bg = grayAA })
+link_hl("CursorLineSign", "SignColumn")
+link_hl("lCursor", "Cursor")
+clear_hl("CursorIM")
+clear_hl("TermCursorNC")
+
+-- searching
+set_hl("Search", { fg = purple, bg = black, reverse = true })
+set_hl("IncSearch", { fg = lavendar, bg = black, reverse = true })
+link_hl("Substitute", "Search")
+clear_hl("CurSearch")
+
+-- comments
+set_hl("Comment", { fg = cobalt })
+
+-- constants
+set_hl("Boolean", { fg = blue })
+set_hl("Character", { fg = sage })
+set_hl("Constant", { fg = sky_blue })
+set_hl("String", { fg = sage })
+link_hl("Float", "Constant")
+link_hl("Number", "Constant")
+
+-- identifiers
+set_hl("Function", { fg = magenta })
+set_hl("Identifier", { fg = sky_blue })
+
+-- statements
+set_hl("Conditional", { fg = blue })
+set_hl("Operator", { fg = grayAA })
+set_hl("Repeat", { fg = blue })
+set_hl("Statement", { fg = red_orange })
+link_hl("Exception", "Statement")
+link_hl("Keyword", "Statement")
+link_hl("Label", "Statement")
+
+-- preprocessor
+set_hl("Define", { fg = denim })
+set_hl("Include", { fg = turquoise })
+set_hl("Macro", { fg = denim })
+set_hl("PreCondit", { fg = denim })
+set_hl("PreProc", { fg = red })
+
+-- types
+set_hl("StorageClass", { fg = magenta })
+set_hl("Structure", { fg = red_orange })
+set_hl("Type", { fg = blue })
+set_hl("Typedef", { fg = red_orange })
+
+-- special
+set_hl("Ignore", { fg = gray50 })
+set_hl("MatchParen", { fg = grayAA, underline = true })
+set_hl("Special", { fg = red })
+set_hl("SpecialChar", { fg = sage, underline = true })
+set_hl("Title", { fg = red_orange })
+set_hl("Todo", { fg = gray88, bold = true })
+set_hl("Underlined", { fg = sky_blue, underline = true })
+link_hl("Debug", "Special")
+link_hl("Delimitter", "Special")
+link_hl("SpecialComment", "Special")
+link_hl("Tag", "Special")
+
+-- nontext
+set_hl("NonText", { fg = gray50 })
+set_hl("SpecialKey", { fg = magenta })
+link_hl("EndOfBuffer", "NonText")
+link_hl("Whitespace", "NonText")
+
+-- spelling
+set_hl("SpellBad", { fg = salmon, underline = true })
+set_hl("SpellCap", { fg = salmon, underline = true })
+set_hl("SpellLocal", { fg = red_orange, underline = true })
+set_hl("SpellRare", { fg = emerald, underline = true })
+
+-- diff
+set_hl("DiffAdd", { fg = black, bg = dark_green })
+set_hl("DiffChange", { fg = black, bg = deep_blue })
+set_hl("DiffDelete", { fg = black, bg = dark_red })
+set_hl("DiffText", { fg = black, bg = denim })
+
+-- menus
+set_hl("Pmenu", { fg = grayAA, bg = gray26 })
+set_hl("PmenuSbar", { bg = gray40 })
+set_hl("PmenuSel", { fg = grayAA, bg = midnight })
+set_hl("PmenuThumb", { bg = gray60 })
+set_hl("WildMenu", { fg = black, bg = deep_blue })
+
+-- directories
+set_hl("Directory", { fg = blue })
+
+-- diagnostics
+set_hl("DiagnosticError", { fg = bright_red })
+set_hl("DiagnosticWarn", { fg = orange })
+set_hl("DiagnosticInfo", { fg = light_blue })
+set_hl("DiagnosticHint", { fg = grayAA })
+set_hl("DiagnosticUnderlineError", { underline = true })
+set_hl("DiagnosticUnderlineWarn", { underline = true })
+set_hl("DiagnosticUnderlineInfo", { underline = true })
+set_hl("DiagnosticUnderlineHint", { underline = true })
+link_hl("DiagnosticFloatingError", "DiagnosticError")
+link_hl("DiagnosticFloatingHint", "DiagnosticHint")
+link_hl("DiagnosticFloatingInfo", "DiagnosticInfo")
+link_hl("DiagnosticFloatingWarn", "DiagnosticWarn")
+link_hl("DiagnosticSignError", "DiagnosticError")
+link_hl("DiagnosticSignHint", "DiagnosticHint")
+link_hl("DiagnosticSignInfo", "DiagnosticInfo")
+link_hl("DiagnosticSignWarn", "DiagnosticWarn")
+link_hl("DiagnosticVirtualTextError", "DiagnosticError")
+link_hl("DiagnosticVirtualTextHint", "DiagnosticHint")
+link_hl("DiagnosticVirtualTextInfo", "DiagnosticInfo")
+link_hl("DiagnosticVirtualTextWarn", "DiagnosticWarn")
+
+-- redrawdebug
+set_hl("RedrawDebugNormal", { fg = black, bg = gray88 })
+set_hl("RedrawDebugClear", { fg = black, bg = yellow })
+link_hl("RedrawDebugComposed", "DiffAdd")
+link_hl("RedrawDebugRecompose", "DiffDelete")
+
+-- nvim
+link_hl("NvimInternalError", "Error")
+
+-- vimscript
+link_hl("vimFunction", "Function")
+
+-- sh
+set_hl("shShellVariables", { fg = red })
+set_hl("shDeref", { fg = red })
+link_hl("shDoubleQuote", "String")
+
+-- GitGutter/gitsigns
+set_hl("GitGutterAdd", { fg = sage })
+set_hl("GitGutterChange", { fg = sky_blue })
+set_hl("GitGutterDelete", { fg = red })
+set_hl("GitGutterChangeDelete", { fg = red })
+
+-- ale
+set_hl("ALEInfoSign", { fg = deep_blue, reverse = true })
+set_hl("ALEStyleWarningSign", { fg = gold, reverse = true })
+set_hl("ALEWarningSign", { fg = gold, reverse = true })
+
+-- nvim-tree
+set_hl("NvimTreeWindowPicker", { fg = magenta, bg = gray15 })
+set_hl("NvimTreeRootFolder", { fg = denim })
+
+-- nvim-treesitter
+set_hl("bashTSFuncBuiltin", { fg = red_orange })
+set_hl("vimTSNamespace", { fg = blue })
+set_hl("vimTSStringSpecial", { fg = denim })
+link_hl("bashTSVariable", "shShellVariables")
