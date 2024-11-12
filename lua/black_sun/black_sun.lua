@@ -276,6 +276,7 @@ link_hl("vimFunction", "Function")
 set_hl("shShellVariables", { fg = red })
 set_hl("shDeref", { fg = red })
 link_hl("shDoubleQuote", "String")
+link_hl("@variable.builtin.bash", "Identifier")
 
 -- GitGutter/gitsigns
 set_hl("GitGutterAdd", { fg = sage })
@@ -297,3 +298,7 @@ set_hl("bashTSFuncBuiltin", { fg = red_orange })
 set_hl("vimTSNamespace", { fg = blue })
 set_hl("vimTSStringSpecial", { fg = denim })
 link_hl("bashTSVariable", "shShellVariables")
+link_hl("@variable", "Identifier")
+
+-- python
+link_hl("@string.documentation.python", "Comment")
