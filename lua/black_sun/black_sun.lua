@@ -206,7 +206,7 @@ set_hl("Title", { fg = red_orange })
 set_hl("Todo", { fg = gray88, bold = true })
 set_hl("Underlined", { fg = sky_blue, underline = true })
 link_hl("Debug", "Special")
-link_hl("Delimitter", "Special")
+link_hl("Delimiter", "Special")
 link_hl("SpecialComment", "Special")
 link_hl("Tag", "Special")
 
