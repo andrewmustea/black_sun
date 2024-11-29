@@ -193,7 +193,7 @@ set_hl("PreProc", { fg = red })
 
 -- types
 set_hl("StorageClass", { fg = magenta })
-set_hl("Structure", { fg = red_orange })
+set_hl("Structure", { fg = denim })
 set_hl("Type", { fg = blue })
 set_hl("Typedef", { fg = red_orange })
 

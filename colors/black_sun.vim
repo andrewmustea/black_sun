@@ -177,7 +177,7 @@ let s:highlights['PreProc']   = { 'guifg': s:red,       'guibg': 'NONE' }
 
 " types
 let s:highlights['StorageClass'] = { 'guifg': s:magenta,     'guibg': 'NONE' }
-let s:highlights['Structure']    = { 'guifg': s:red_orange,  'guibg': 'NONE' }
+let s:highlights['Structure']    = { 'guifg': s:denim,       'guibg': 'NONE' }
 let s:highlights['Type']         = { 'guifg': s:blue,        'guibg': 'NONE' }
 let s:highlights['Typedef']      = { 'guifg': s:red_orange,  'guibg': 'NONE' }
 
