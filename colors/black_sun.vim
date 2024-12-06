@@ -142,7 +142,7 @@ highlight! clear TermCursorNC
 let s:highlights['Search']    = { 'guifg': s:purple,   'guibg': s:black, 'gui': 'reverse' }
 let s:highlights['IncSearch'] = { 'guifg': s:lavendar, 'guibg': s:black, 'gui': 'reverse' }
 highlight! link Substitute Search
-highlight! clear CurSearch
+highlight! link CurSearch IncSearch
 
 " comments
 let s:highlights['Comment'] = { 'guifg': s:cobalt, 'guibg': 'NONE' }

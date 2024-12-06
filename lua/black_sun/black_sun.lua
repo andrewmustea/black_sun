@@ -158,7 +158,7 @@ clear_hl("TermCursorNC")
 set_hl("Search", { fg = purple, bg = black, reverse = true })
 set_hl("IncSearch", { fg = lavendar, bg = black, reverse = true })
 link_hl("Substitute", "Search")
-clear_hl("CurSearch")
+link_hl("CurSearch", "IncSearch")
 
 -- comments
 set_hl("Comment", { fg = cobalt })
